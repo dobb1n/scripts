@@ -7,7 +7,7 @@ import threading
 import time
 
 # Parse inputs
-host = "sit02-dlp-online-b.digital.lloydsbank.co.uk"
+host = ""
 ip = ""
 port = 443
 num_requests = 5

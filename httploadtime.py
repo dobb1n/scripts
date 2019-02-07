@@ -8,7 +8,7 @@ import socket
 import ssl
 
 # Variables of which site to request and how many times 
-host = "https://sit02-dlp-online-b.digital.lloydsbank.co.uk"
+host = ""
 numrequests = 5
 
 # Convert site name into ip to avoid DNS lookups 
