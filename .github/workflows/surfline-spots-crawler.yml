@@ -1,0 +1,42 @@
+name: Surfline Spots Crawler
+
+on:
+  schedule:
+    - cron: '0 3 * * 6'  # Every Saturday at 03:00 UTC
+  workflow_dispatch:      # Allow manual runs
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run crawler
+        run: python3 surfline_spots_crawler.py --output surfline_spots.csv --format csv
+
+      - name: Commit and push results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add surfline_spots.csv
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: update surfline spots data [$(date -u '+%Y-%m-%d')]"
+            git push origin main
+          fi
