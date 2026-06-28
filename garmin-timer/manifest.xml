@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<iq:manifest xmlns:iq="http://www.garmin.com/xml/connectiq" version="3">
+    <iq:application
+        entry="TimerApp"
+        id="a3421fee-7dc3-40c3-b2b8-d7bb43e4745f"
+        launchLabel="Timer"
+        minSdkVersion="3.0.0"
+        name="@Strings.AppName"
+        type="watch-app">
+
+        <iq:products>
+            <!-- Fenix series -->
+            <iq:product id="fenix6"/>
+            <iq:product id="fenix6s"/>
+            <iq:product id="fenix6xpro"/>
+            <iq:product id="fenix7"/>
+            <iq:product id="fenix7s"/>
+            <iq:product id="fenix7x"/>
+            <!-- Forerunner series -->
+            <iq:product id="fr245"/>
+            <iq:product id="fr245m"/>
+            <iq:product id="fr255"/>
+            <iq:product id="fr265"/>
+            <iq:product id="fr645"/>
+            <iq:product id="fr645m"/>
+            <iq:product id="fr745"/>
+            <iq:product id="fr945"/>
+            <iq:product id="fr945lte"/>
+            <iq:product id="fr955"/>
+            <iq:product id="fr965"/>
+            <!-- Vivoactive series -->
+            <iq:product id="vivoactive4"/>
+            <iq:product id="vivoactive4s"/>
+            <!-- MARQ series -->
+            <iq:product id="marqathlete"/>
+            <iq:product id="marqadventurer"/>
+            <iq:product id="marqaviator"/>
+            <iq:product id="marqcaptain"/>
+            <iq:product id="marqcommander"/>
+            <iq:product id="marqdriver"/>
+            <iq:product id="marqexpedition"/>
+            <iq:product id="marqgolfer"/>
+            <!-- Edge cycling computers -->
+            <iq:product id="edge530"/>
+            <iq:product id="edge830"/>
+            <iq:product id="edge1030"/>
+            <iq:product id="edge1030plus"/>
+        </iq:products>
+
+        <iq:permissions>
+            <iq:uses-permission id="Vibration"/>
+        </iq:permissions>
+
+        <iq:languages>
+            <iq:language>eng</iq:language>
+        </iq:languages>
+    </iq:application>
+</iq:manifest>

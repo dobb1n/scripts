@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<strings>
+    <string id="AppName">Timer</string>
+    <string id="StateReady">READY</string>
+    <string id="StateRunning">RUNNING</string>
+    <string id="StatePaused">PAUSED</string>
+    <string id="StateDone">DONE!</string>
+    <string id="HintIdle">UP/DN: +/-1min   SEL: Start</string>
+    <string id="HintRunning">SEL: Pause   BCK: Reset</string>
+    <string id="HintPaused">SEL: Resume   BCK: Reset</string>
+    <string id="HintDone">SEL: Restart   BCK: New</string>
+</strings>
